@@ -14,12 +14,12 @@ class Validate {
   //, it will tell the steam builder what value type (String ,int ,Object) it will recive,
   //second one will tell what kind of value will the sink add
 
-  StreamTransformer streamTransformer =
-      new StreamTransformer.fromHandlers(handleData: (cakeType, sink) {
-    if (cakeType == "a") {
-      sink.add("whats");
-    } else if (cakeType == "hello") {
-      sink.add("hello");
+  final passwordTester = StreamTransformer<String, String>.fromHandlers(
+      handleData: (password, sink) {
+    if (password.length > 4) {
+      sink.add(password);
+    } else {
+      sink.addError("error is bad");
     }
   });
 }

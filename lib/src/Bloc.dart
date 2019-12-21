@@ -8,6 +8,6 @@ class Bloc extends Object with Validate {
   Stream<String> get email => _email.stream.transform(emailTester);
   Function(String) get changeEmail => _email.sink.add;
 
-  Stream<String> get password => _password.stream;
+  Stream<String> get password => _password.stream.transform(passwordTester);
   Function(String) get changePassword => _password.sink.add;
 }

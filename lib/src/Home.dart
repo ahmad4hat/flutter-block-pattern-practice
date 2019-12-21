@@ -26,7 +26,21 @@ class Home extends StatelessWidget {
                   onChanged: bloc.changeEmail,
                 );
               },
-              stream: bloc.email)
+              stream: bloc.email),
+          StreamBuilder(
+              builder: (context, snapshot) {
+                return TextField(
+                  obscureText: true,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                    hintText: "your@email.com",
+                    labelText: "password",
+                    errorText: snapshot.error,
+                  ),
+                  onChanged: bloc.changePassword,
+                );
+              },
+              stream: bloc.password)
         ],
       ),
     );
