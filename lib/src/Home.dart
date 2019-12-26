@@ -40,7 +40,17 @@ class Home extends StatelessWidget {
                   onChanged: bloc.changePassword,
                 );
               },
-              stream: bloc.password)
+              stream: bloc.password),
+          StreamBuilder(
+            builder: (context, snapshot) {
+              return FlatButton(
+                child: Text("x"),
+                color: Colors.greenAccent,
+                onPressed: snapshot.hasData ? () {} : null,
+              );
+            },
+            stream: bloc.submitValid,
+          )
         ],
       ),
     );

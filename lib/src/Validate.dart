@@ -6,7 +6,7 @@ class Validate {
     if (email.contains('@')) {
       sink.add(email);
     } else {
-      sink.addError("error is bad");
+      sink.addError("Email is not a email");
     }
   });
 
@@ -19,7 +19,7 @@ class Validate {
     if (password.length > 4) {
       sink.add(password);
     } else {
-      sink.addError("error is bad");
+      sink.addError("Password is less than 3 ");
     }
   });
 }

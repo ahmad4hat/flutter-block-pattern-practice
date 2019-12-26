@@ -1,6 +1,19 @@
-# hello_world
+# BLOCK_Pattern-Practice
 
-A new Flutter project.
+A Block pattern practice project for learning.
+Combines two stream with rx dart,
+
+# Dependencies 
+* [RX Dart](https://pub.dev/packages/rxdart)
+* [Flutter](https://flutter.dev/) 
+
+
+## How to run this prject
+write this in your terminal
+```terminal
+flutter pub get
+flutter run
+```
 
 ## Getting Started
 
